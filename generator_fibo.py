@@ -6,9 +6,13 @@ def fibonacci():
         a, b = b, a + b
 
 
-obj = fibonacci()
+user_input = input("Enter the number sequence to generate the  series: ")
 
-print(next(obj))
-print(next(obj))
-print(next(obj))
-print(next(obj))
+try:
+    n = int(user_input)
+    if n < 0:
+        print("Please enter a non-negative integer.")
+    else:
+        print(fibonacci(n))
+except:
+    print("Invalid Input. Please enter an integer.")
