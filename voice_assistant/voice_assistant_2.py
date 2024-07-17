@@ -82,8 +82,9 @@ def weather(city_name):
         current_temp = data['current']['temp_c']
         current_humid = data['current']['humidity']
         weather_description = data['current']['condition']['text']
-        speak(f"Temperature is {current_temp} degree celsius, humidity is {current_humid} percent, and weather is described as {weather_description}.")
-        print(f"Temparature: {current_temp} °C\n, Humidity: {current_humid}%\n, and Weather details: {weather_description}.")
+        speak(f"Temperature is {current_temp} degree celsius, humidity is {current_humid} percent, and weather is "
+              f"described as {weather_description}.")
+        print(f"Temperature: {current_temp} °C\n, Humidity: {current_humid}%\n, and Weather details: {weather_description}.")
     else:
         speak("City not found. Please try again.")
         print("City not found. Please try again.")
