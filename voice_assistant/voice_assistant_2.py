@@ -46,14 +46,14 @@ def speak(text):
 def ask():
     hour = datetime.datetime.now().hour
     if 0 <= hour < 12:
-        speak("Hello Banika, Good Morning")
-        print("Hello Banika, Good Morning")
+        speak("Hello Sowrin, Good Morning")
+        print("Hello Sowrin, Good Morning")
     elif 12 <= hour < 18:
-        speak("Hello Banika, Good Afternoon")
-        print("Hello Banika, Good Afternoon")
+        speak("Hello Sowrin, Good Afternoon")
+        print("Hello Sowrin, Good Afternoon")
     else:
-        speak("Hello Banika, Good Evening")
-        print("Hello Banika, Good Evening")
+        speak("Hello Sowrin, Good Evening")
+        print("Hello Sowrin, Good Evening")
 
 
 def takeCommand():
@@ -71,8 +71,8 @@ def takeCommand():
 
 
 def weather(city_name):
-    api_key = "2db14941b6964b98a42141601240307"
-    base_url = "http://api.weatherapi.com/v1/current.json"
+    api_key = "a1ccaf7a0f1a4b0bbf762403241707"
+    base_url = "https://api.weatherapi.com/v1/current.json"
     complete_url = f"{base_url}?key={api_key}&q={city_name}"
 
     response = requests.get(complete_url)
@@ -87,6 +87,7 @@ def weather(city_name):
     else:
         speak("City not found. Please try again.")
         print("City not found. Please try again.")
+
 
 def main():
     print("Loading your personal assistant...")
